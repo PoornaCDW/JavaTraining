@@ -1,5 +1,3 @@
-package exersice_1;
-
 public class Day1_8 {
 	public static void main(String[] args) {
 		int a[] = new int[]{10, 20, 23, 90, 7};

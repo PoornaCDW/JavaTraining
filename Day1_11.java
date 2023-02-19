@@ -1,5 +1,3 @@
-package exersice_1;
-
 public class Day1_11 {
 	public static void main(String[] args) {
 		int pattern = 1;

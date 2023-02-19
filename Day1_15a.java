@@ -1,5 +1,3 @@
-package exersice_1;
-
 public class Day1_15a {
 	public static void main(String[] args) {
 		System.out.println("Prime numbers from 1 to 100.");

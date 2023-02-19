@@ -1,5 +1,3 @@
-package exersice_1;
-
 public class Day1_2 {
 	static byte b;
 	static short s;

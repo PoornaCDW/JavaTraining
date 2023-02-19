@@ -1,4 +1,3 @@
-package exersice_1;
 import java.util.*;
 
 public class Day1_13 {
@@ -20,7 +19,7 @@ public class Day1_13 {
 			}
 		}
 		
-		System.out.println("Student details:");
+		System.out.println("Student details(last row being the result):");
 		for(int i=0; i<n; i++) {
 			System.out.println("");
 			for(int j=0; j<6; j++) {
