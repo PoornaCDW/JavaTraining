@@ -1,7 +1,7 @@
 class SingletonExample {
     static SingletonExample s;
 
-    SingletonExample() {}
+    private SingletonExample() {}
 
     public static SingletonExample get() {
         if(s == null)

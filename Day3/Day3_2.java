@@ -8,7 +8,7 @@ interface CalcVolume {
     double volume();
 }
 
-class Circle implements CalcArea, CalcVolume {
+class Circle implements CalcArea {
     private double radius;
     private final double pi = Math.PI;
     
@@ -22,14 +22,6 @@ class Circle implements CalcArea, CalcVolume {
     
     public double perimeter() {
         return 2 * pi * radius;
-    }
-    
-    public double surfaceArea() {
-        return 4 * pi * radius * radius;
-    }
-    
-    public double volume() {
-        return (4/3) * pi * radius * radius * radius;
     }
 }
 
@@ -124,8 +116,6 @@ public class Day3_2 {
         Circle c = new Circle(5.0);
         System.out.println("Circle area: " + c.area());
         System.out.println("Circle perimeter: " + c.perimeter());
-        System.out.println("Circle surface area: " + c.surfaceArea());
-        System.out.println("Circle volume: " + c.volume());
         
         Square s = new Square(10.0);
         System.out.println("Square area: " + s.area());
