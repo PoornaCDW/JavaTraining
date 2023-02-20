@@ -58,6 +58,7 @@ public class Day2_4 {
         s.push(4);
         s.stackView();
         s.push(112);
+        s.push(8);
         s.stackView();
         if(s.isFull())
             System.out.println("Stack full!");
