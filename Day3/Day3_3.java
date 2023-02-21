@@ -75,7 +75,7 @@ public class Day3_3 {
 
         System.out.println();
 
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 18; i++) {
             ds.push(i);
         }
         System.out.println("Elements in dynamic stack:");

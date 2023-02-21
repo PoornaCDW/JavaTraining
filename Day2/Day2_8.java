@@ -18,5 +18,6 @@ public class Day2_8 {
     public static void main(String[] args) {
         SingletonExample s = SingletonExample.get();
         s.TestPrint();
+        //SingletonExample s = new SingletonExample();
     }
 }
