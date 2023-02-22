@@ -23,7 +23,7 @@ public class Day4_7b {
             if(denominator == 0) {
                 throw new ArithmeticException();
             }
-            else if(numerator == 'q' || denominator == 'Q') {
+            else if(numerator == 'q' || numerator == 'Q') {
                 System.exit(0);
             }
             else {
