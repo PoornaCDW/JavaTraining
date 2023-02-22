@@ -10,7 +10,7 @@ public class Day4_7b {
             try {
                 numerator = sc.nextInt();
             }  catch(InputMismatchException e) {
-                return;
+                break;
             }
             System.out.println("Enter the denominator:");
             denominator = sc.nextInt();
