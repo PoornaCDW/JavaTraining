@@ -1,35 +1,32 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Day4_7b {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int numerator = 0, denominator;
+        String numerator, denominator;
         while(true) {
             System.out.println("Enter the numerator:");
-            try {
-                numerator = sc.nextInt();
-            }  catch(InputMismatchException e) {
+            numerator = sc.next();
+            if(numerator.equals("q") || numerator.equals("Q")) {
                 break;
             }
             System.out.println("Enter the denominator:");
-            denominator = sc.nextInt();
+            denominator = sc.next();
             testDivisionOperation(numerator, denominator);
         }
     }
 
-    public static void testDivisionOperation(int numerator, int denominator) {
+    public static void testDivisionOperation(String numerator, String denominator) {
         try {
-            if(denominator == 0) {
+            if(denominator.equals("0")) {
                 throw new ArithmeticException();
-            }
-            else if(numerator == 'q' || numerator == 'Q') {
-                System.exit(0);
-            }
-            else {
-                System.out.println("Quotient  - "+((float)numerator/denominator));
+            }else {
+                System.out.println("Quotient  - "+((float)Integer.parseInt(numerator)/Integer.parseInt(denominator)));
             }
         } catch(ArithmeticException exception) {
+            System.out.println("Division by zero!");
+            System.out.println(exception);
+        } catch(NumberFormatException exception) {
             System.out.println("Poor input data!");
             System.out.println(exception);
         }
