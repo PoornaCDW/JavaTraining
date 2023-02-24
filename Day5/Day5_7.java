@@ -5,8 +5,8 @@ import java.util.concurrent.Executors;
 
 public class Day5_7 {
     static int seconds = 0, secondsCount = 0;
-    public static void main(String[] args) {
-        ExecutorService es = Executors.newFixedThreadPool(1);
+    public static void main(String[] args) throws Exception{
+        ExecutorService es = Executors.newFixedThreadPool(2);
 
         es.execute(()->{
             for(int i=1; i<=100; i++) {
@@ -19,7 +19,5 @@ public class Day5_7 {
                     System.out.println("Reached "+(seconds+=10)+" seconds!");
             }
         });
-
-        es.shutdown();
     }
 }
