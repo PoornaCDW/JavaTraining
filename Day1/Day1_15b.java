@@ -12,16 +12,12 @@ public class Day1_15b {
 		n = sc.nextInt();
 		if(armstrong(n))
 			System.out.println("It is an armstrong number.");
-		else
-			System.out.println("The number is not an armstrong number!");
 		if(perfectNo(n))
 			System.out.println("It is a perfect number.");
-		else
-			System.out.println("The number is not a perfect number!");
 		if(palindrome(n))
 			System.out.println("It is a palindrome.");
-		else
-			System.out.println("The number is not a palindrome!");
+		if(!armstrong(n) && !perfectNo(n) && !palindrome(n))
+			System.out.println("The number is none of them!");
 	}
 	
 	public static boolean armstrong(int n) {
