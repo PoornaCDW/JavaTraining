@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Day4_5 {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int marks;
         System.out.println("Enter the marks in Maths out of 100:");
@@ -9,7 +9,7 @@ public class Day4_5 {
         toThrow(marks);
     }
 
-    public static void toThrow(int marks) throws Exception {
+    public static void toThrow(int marks) {
         if(marks >= 33)
             System.out.println("The student has sucessfully passed in Maths!");
         else

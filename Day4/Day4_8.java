@@ -8,7 +8,7 @@ public class Day4_8 {
         boolean flag = true;
 
         while(flag) {
-            BACK:try {
+            try {
                 System.out.println("Enter the marks of 10 student:");
                 for(int i=0; i<10; i++) {
                     studentMarks[i] = Integer.parseInt(sc.next());
@@ -18,7 +18,7 @@ public class Day4_8 {
                 System.out.println("Average marks of 10 students: "+avg);
             } catch(NumberFormatException e) {
                 System.out.println(e);
-                break BACK;
+                continue;
             }
         }
         sc.close();

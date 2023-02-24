@@ -3,25 +3,23 @@ import java.util.Scanner;
 public class Day4_7a {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int numerator, denominator;
         while(true) {
             System.out.println("Enter the numerator:");
-            numerator = sc.nextInt();
-            System.out.println("Enter the denominator:");
-            denominator = sc.nextInt();
-            testDivisionOperation(numerator, denominator);
+            int numerator = sc.nextInt();
+                  try {
+                    System.out.println("Enter the denominator:");
+                    int denominator = sc.nextInt();
+                    if(denominator == 0)
+                        throw new ArithmeticException();
+                    testDivisionOperation(numerator, denominator);
+                  } catch(ArithmeticException A) {
+                    System.out.println(A);
+                    continue;
+                  }
         }
     }
 
     public static void testDivisionOperation(int numerator, int denominator) {
-        try {
-            if(denominator == 0)
-                throw new ArithmeticException();
-            else
-                System.out.println("Quotient  - "+((float)numerator/denominator));
-        } catch(ArithmeticException exception) {
-            System.out.println("Poor input data!");
-            System.out.println(exception);
-        }
+        System.out.println("Quotient  - "+((float)numerator/denominator));
     }
 }

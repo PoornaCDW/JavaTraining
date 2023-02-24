@@ -6,8 +6,8 @@ public class Day4_2 {
 
     public void mth2() {
         try {
-            //throw new Exception();
-            return;
+            throw new Exception();
+            //return;
         } catch(Exception e) {
             System.out.println("catch-mth2");
         } finally {

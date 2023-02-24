@@ -1,5 +1,5 @@
 public class Day4_6 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         Derived d = new Derived();
     }
 }
@@ -14,13 +14,8 @@ class Base {
 }
 
 class Derived extends Base {
-    Derived() {
-        System.out.println("In derived class constructor.");
-        try {
-            Base b = new Base();
-        } catch(Exception e) {
-            System.out.println(e);
-        }
+    Derived() throws Exception{
+        super();
     }
 }
 
