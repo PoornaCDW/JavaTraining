@@ -45,16 +45,17 @@ class DigitalClock {
     }
 
     synchronized void forSecond() {
-        if(second <= 59) {
-            for(int i=second; i<60; i++) {
+        int i;
+        if(second < 59) {
+            for(i=second; i<60; i++) {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 System.out.println(hour+":"+minute+":"+i);
-                second++;
             }
+            second = i;
             notifyAll();
         } else {
             try {
@@ -66,7 +67,7 @@ class DigitalClock {
     }
 
     synchronized void forMinute() {
-        if(minute < 60 && second == 60) {
+        if(minute < 59 && second == 60) {
             minute++;
             second = 0;
             notifyAll();

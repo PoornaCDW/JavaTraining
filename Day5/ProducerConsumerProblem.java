@@ -9,14 +9,16 @@ public class ProducerConsumerProblem {
         Inventory i = new Inventory();
 
         es.execute(()-> {
-            for(int n=0; n<4; n++)
+            for(int n=0; n<4; n++) {
                 i.produceProduct();
+                i.consumeProduct();
+            }
         });
 
-        es.execute(()-> {
-            for(int n=0; n<4; n++)
-                i.consumeProduct();
-        });
+        // es.execute(()-> {
+        //     for(int n=0; n<4; n++)
+        //         i.consumeProduct();
+        // });
 
         es.shutdown();
     }

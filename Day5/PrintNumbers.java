@@ -9,11 +9,12 @@ public class PrintNumbers {
         
         Threads.execute(()-> {
             even();
-        });
-
-        Threads.execute(()-> {
             odd();
         });
+
+        // Threads.execute(()-> {
+            
+        // });
         
         Threads.shutdown();
     }

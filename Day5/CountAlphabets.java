@@ -19,13 +19,18 @@ public class CountAlphabets {
                     }
                 }
                 c.printCount();
-            }
-        });
-
-        es.execute(()->{
-            synchronized(c) {
                 c.countAlphabet = 0;
-                String s1 = "`22&&(e";
+                s1 = "`22&&(e";
+                for(int i=0; i<s1.length(); i++) {
+                    try{
+                        c.countMethod(s1.charAt(i));
+                    }catch(NonAlphabeticCharecter e) {
+                        System.out.println(e);
+                    }
+                }
+                c.printCount();
+                c.countAlphabet = 0;
+                s1 = "opivhbe";
                 for(int i=0; i<s1.length(); i++) {
                     try{
                         c.countMethod(s1.charAt(i));
@@ -37,20 +42,35 @@ public class CountAlphabets {
             }
         });
 
-        es.execute(()->{
-            synchronized(c) {
-                c.countAlphabet = 0;
-                String s1 = "opivhbe";
-                for(int i=0; i<s1.length(); i++) {
-                    try{
-                        c.countMethod(s1.charAt(i));
-                    }catch(NonAlphabeticCharecter e) {
-                        System.out.println(e);
-                    }
-                }
-                c.printCount();
-            }
-        });
+        // es.execute(()->{
+        //     synchronized(c) {
+        //         c.countAlphabet = 0;
+        //         String s1 = "`22&&(e";
+        //         for(int i=0; i<s1.length(); i++) {
+        //             try{
+        //                 c.countMethod(s1.charAt(i));
+        //             }catch(NonAlphabeticCharecter e) {
+        //                 System.out.println(e);
+        //             }
+        //         }
+        //         c.printCount();
+        //     }
+        // });
+
+        // es.execute(()->{
+        //     synchronized(c) {
+        //         c.countAlphabet = 0;
+        //         String s1 = "opivhbe";
+        //         for(int i=0; i<s1.length(); i++) {
+        //             try{
+        //                 c.countMethod(s1.charAt(i));
+        //             }catch(NonAlphabeticCharecter e) {
+        //                 System.out.println(e);
+        //             }
+        //         }
+        //         c.printCount();
+        //     }
+        // });
     }   
 }
 

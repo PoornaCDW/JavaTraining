@@ -5,26 +5,26 @@ import java.util.concurrent.Executors;
 
 public class MessagePrint {
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newFixedThreadPool(4);
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
         MultiThreadAccess multiThreadAccess = new MultiThreadAccess();
 
         synchronized(multiThreadAccess){
             executorService.execute(()->{
                 multiThreadAccess.printMessage("Hello");
-            });
-        }
-
-        synchronized(multiThreadAccess){
-            executorService.execute(()->{
                 multiThreadAccess.printMessage("this is");
-            });
-        }
-
-        synchronized(multiThreadAccess){
-            executorService.execute(()->{
                 multiThreadAccess.printMessage("Poorna!");
             });
         }
+
+        // synchronized(multiThreadAccess){
+        //     executorService.execute(()->{
+        //     });
+        // }
+
+        // synchronized(multiThreadAccess){
+        //     executorService.execute(()->{
+        //     });
+        // }
 
         executorService.shutdown();
     }
