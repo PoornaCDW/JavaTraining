@@ -3,19 +3,19 @@ package Day5;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Day5_1 {
+public class PrintNumbers {
     public static void main(String[] args) {
-        ExecutorService es = Executors.newFixedThreadPool(2);
+        ExecutorService Threads = Executors.newFixedThreadPool(2);
         
-        es.execute(()-> {
+        Threads.execute(()-> {
             even();
         });
 
-        es.execute(()-> {
+        Threads.execute(()-> {
             odd();
         });
         
-        es.shutdown();
+        Threads.shutdown();
     }
 
     synchronized public static void even() {

@@ -4,7 +4,7 @@ import java.time.LocalTime;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Day5_4 {
+public class DigitalClockProgram {
     public static void main(String[] args) {
         LocalTime time = LocalTime.now();
 

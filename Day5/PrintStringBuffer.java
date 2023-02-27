@@ -1,7 +1,7 @@
 package Day5;
 
 
-public class Day5_8 {
+public class PrintStringBuffer {
     public static void main(String[] args) {
         StringBuffer stringBuffer = new StringBuffer("A");
 

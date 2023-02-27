@@ -3,7 +3,7 @@ package Day5;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Day5_6 {
+public class CountAlphabets {
     public static void main(String[] args) {
         ExecutorService es = Executors.newFixedThreadPool(3);
         CountAlpha c = new CountAlpha();
@@ -55,7 +55,7 @@ public class Day5_6 {
 }
 
 class CountAlpha {
-    static int countAlphabet;
+    int countAlphabet;
     
     public void countMethod(char c) throws NonAlphabeticCharecter{
         if(Character.isLetter(c)) {

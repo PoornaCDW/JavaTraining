@@ -3,7 +3,7 @@ package Day5;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Day5_3 {
+public class ProducerConsumerProblem {
     public static void main(String[] args) {
         ExecutorService es = Executors.newFixedThreadPool(2);
         Inventory i = new Inventory();
@@ -33,7 +33,7 @@ class Inventory {
         if(productCount != 0) {
             try{wait();}catch(Exception e) {}
         }
-        try{Thread.sleep(1000);}catch(Exception e) {}
+        try{Thread.sleep(1000);}catch(Exception e) {e.printStackTrace();}
         System.out.println("Producing the product!");
         productCount++;
         notify();
@@ -43,7 +43,7 @@ class Inventory {
         if(productCount == 0) {
             try{wait();}catch(Exception e) {}
         }
-        try{Thread.sleep(500);}catch(Exception e) {}
+        try{Thread.sleep(500);}catch(Exception e) {e.printStackTrace();}
         System.out.println("Consuming the product!");
         productCount = 0;
         notify();
