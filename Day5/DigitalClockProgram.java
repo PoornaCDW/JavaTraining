@@ -49,7 +49,7 @@ class DigitalClock {
             for(int i=second; i<60; i++) {
                 try {
                     Thread.sleep(1000);
-                } catch (InterruptedException e) {\
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 System.out.println(hour+":"+minute+":"+i);

@@ -18,14 +18,14 @@ public class PrintNumbers {
         Threads.shutdown();
     }
 
-    public static void even() {
+    synchronized public static void even() {
         System.out.println("Printing Even numbers from 1 to 100");
         for(int i=2; i<=100; i+=2)
                 System.out.print(" "+i);
         System.out.println();
     }
 
-    public static void odd() {
+    synchronized public static void odd() {
         System.out.println("Printing Odd numbers from 1 to 100");
         for(int i=1; i<=100; i+=2)
             System.out.print(" "+i);
