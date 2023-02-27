@@ -47,13 +47,21 @@ class DigitalClock {
     synchronized void forSecond() {
         if(second <= 59) {
             for(int i=second; i<60; i++) {
-                try{Thread.sleep(1000);}catch(Exception e){}
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {\
+                    e.printStackTrace();
+                }
                 System.out.println(hour+":"+minute+":"+i);
                 second++;
             }
             notifyAll();
         } else {
-            try{wait();}catch(Exception e) {}
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -63,7 +71,11 @@ class DigitalClock {
             second = 0;
             notifyAll();
         } else {
-            try{wait();}catch(Exception e) {}
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -74,7 +86,11 @@ class DigitalClock {
             second = 0;
             notifyAll();
         } else {
-            try{wait();}catch(Exception e) {}
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
