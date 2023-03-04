@@ -2,20 +2,33 @@ package Exercise5.Memento;
 
 public class MementoPattern {
     public static void main(String[] args) {
-        Student student = new StudentDetails();
+        StudentOriginator studentOriginator = new StudentOriginator();
+        StudentCaretaker caretaker = new StudentCaretaker();
+        studentOriginator.setName("Amir");
+        studentOriginator.setAge(21);
+        studentOriginator.setGPA(2.5);
+        caretaker.save(studentOriginator);
 
-        student.setRollNumber(8);
-        student.setStudentName("Sai");
+        studentOriginator.setName("Kiran");
+        studentOriginator.setAge(23);
+        studentOriginator.setGPA(4.0);
+        caretaker.save(studentOriginator);
 
-        PreviousStudentStateToCareTaker previousStudentStateToCareTaker = student.backupLastStudent();
+        studentOriginator.setName(null);
+        studentOriginator.setAge(30923);
+        studentOriginator.setGPA(44.8);
 
-        student.unpredictedEvent();
-        System.out.println("Roll Number: "+student.getRollNumber());
-        System.out.println("Student Name: "+student.getStudentName());
+        System.out.println("Modified student details:");
+        studentOriginator.display();
 
-        student.restoreLastStudent(previousStudentStateToCareTaker);
-        System.out.println("Data restored from backup successfully!");
-        System.out.println("Roll Number: "+student.getRollNumber());
-        System.out.println("Student Name: "+student.getStudentName());
+        caretaker.undo(studentOriginator);
+
+        System.out.println("Previous restored student details:");
+        studentOriginator.display();
+
+        caretaker.undo(studentOriginator);
+
+        System.out.println("Previous restored student details(x2):");
+        studentOriginator.display();
     }
 }

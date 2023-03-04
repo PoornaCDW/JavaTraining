@@ -9,7 +9,11 @@ class Song{
         this.songName = songName;
         this.songArtist = songArtist;
     }
-    
+
+    public String getSongName() {
+        return this.songName;
+    }
+
     public void play() {
         System.out.println("Playing Song: "+songName+" by artisy - "+songArtist);
     }
