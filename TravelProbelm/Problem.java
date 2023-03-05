@@ -6,12 +6,12 @@ public class Problem {
     public static void main(String[] args) {
         HolidayStrategy holidayStrategy = Year.now().isLeap() ? new LeapYearHolidayStrategy() : new DefaultHolidayStrategy();
 
-        TransportLorry lorry = new TransportLorry(50, holidayStrategy);
+        TransportLorry lorry = new TransportLorry(180, 8, holidayStrategy);
 
         // Example usage
         LocalDate date = LocalDate.now();
         LocalTime time = LocalTime.now();
-        double distance = 500;
+        double distance = 1400;
 
         LocalDateTime arrivalTime = lorry.calculateArrivalTime(date, time, distance);
 

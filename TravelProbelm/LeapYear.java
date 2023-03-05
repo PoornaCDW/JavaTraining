@@ -11,7 +11,6 @@ class LeapYearHolidayStrategy extends DefaultHolidayStrategy {
 
     @Override
     public boolean isHoliday(LocalDate date) {
-        // Check if it is one of the holidays or Feb 29
         return super.isHoliday(date) || (date.getMonth() == Month.FEBRUARY && date.getDayOfMonth() == TWENTYNINE);
     }
 }
