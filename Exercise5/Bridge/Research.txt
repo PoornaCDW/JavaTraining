@@ -1,0 +1,23 @@
+Bridge Pattern:
+
+1. What and why?
+-> Bridge is used when we need to decouple an abstraction from its implementation so 
+   that the two can vary independently.
+-> This type of design pattern comes under structural pattern as this pattern decouples 
+   implementation class and abstract class by providing a bridge structure between them.
+
+2. When do we use Bridge Pattern?
+-> When there is a need to decouple an abstraction from its implementation so that both can vary independently.
+-> When there is a need to avoid a permanent binding between an abstraction and its implementation, which could be the case when an implementation must be selected or switched at runtime.
+-> When there are multiple dimensions or types of classifications of abstractions and implementations, and a hierarchy of classes would result in an impractical number of class combinations.
+
+3. Realtime Bridge implementations.
+-> GUI toolkits: The Bridge Pattern is often used in GUI toolkits where the abstraction represents the client code and the implementation represents the underlying platform-specific code. 
+   Examples include AWT and Swing in Java.
+-> Operating systems: Operating systems use the Bridge Pattern to separate the abstraction of a file system from its implementation, allowing the system to work with different file systems 
+   without changing its code.
+-> Database systems: Database systems use the Bridge Pattern to separate the abstraction of a database from its implementation, allowing the system to work with different database management 
+   systems without changing its code.
+-> Networking: Networking systems use the Bridge Pattern to separate the abstraction of a network protocol from its implementation, allowing the system to work with different network protocols 
+   without changing its code.
+-> Printing: Printers use the Bridge Pattern to separate the abstraction of a print job from its implementation, allowing the printer to work with different types of print jobs without changing its code.

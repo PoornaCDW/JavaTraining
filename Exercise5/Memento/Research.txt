@@ -1,0 +1,33 @@
+Memento Pattern:
+
+1. What is memento pattern?
+-> Memento pattern is used to restore state of an object to a previous state. Memento pattern falls under behavioral pattern category.
+
+2. Why do we need memento pattern?
+-> It is sometimes necessary to capture the internal state of an object at some point and have the ability to restore the object to that state later in time. 
+   Such a case is useful in case of error or failure.
+-> The Memento pattern provides a way to isolate the state of an object from the rest of the system, 
+   which can help to reduce coupling between objects and improve overall system maintainability.
+
+3. When do we use memento pattern?
+-> Undo/ Redo functionality.
+-> Checkpoint functionality.
+-> Transaction management.
+
+4. How?
+-> Memento pattern uses three actor classes. 
+-> Memento contains state of an object to be restored. 
+-> Originator creates and stores states in Memento objects and Caretaker object is responsible to restore object state from Memento.
+
+5. Actor class of Memento Pattern:
+i. Memento:
+   -Stores internal state of the Originator object. The state can include any number of state variables.
+   -The Memento must have two interfaces, an interface to the caretaker. This interface must not allow any operations or any access 
+    to internal state stored by the memento and thus honors encapsulation. The other interface is to the originator and allows the 
+    originator to access any state variables necessary to for the originator to restore previous state.
+ii. Originator:
+    -Creates a memento object capturing the originators internal state.
+    -Use the memento object to restore its previous state.
+iii. Caretaker:
+     -Responsible for keeping the memento.
+     -The memento is opaque to the caretaker, and the caretaker must not operate on it.

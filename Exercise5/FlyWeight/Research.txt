@@ -1,0 +1,17 @@
+FlyWeight Pattern
+
+1. What?
+-> Flyweight pattern is primarily used to reduce the number of objects created and to decrease memory footprint and increase performance. 
+-> This type of design pattern comes under structural pattern as this pattern provides ways to decrease object count thus improving the object structure of application.
+
+2. Why?
+-> We use the Flyweight pattern to optimize the memory usage of an application. 
+-> This pattern is useful when an application needs to create a large number of objects of the same class, and many of these objects have identical intrinsic states (i.e., the same set of properties with the same values). 
+-> In such cases, instead of creating a new object for each instance, the Flyweight pattern reuses existing objects with the same intrinsic state. This reduces the memory usage of the application and improves its performance.
+
+3. Where do we use FlyWeight?
+-> Text editing software: In a text editor, characters and fonts are used repeatedly. Instead of creating a new object for each character or font, the flyweight pattern is used to reuse the existing objects.
+-> Music player: In a music player, the same music tracks are played multiple times. By using the flyweight pattern, we can create a single object for each track and reuse it when needed.
+-> Inventory management: In an inventory management system, there are many items with the same properties, such as weight, color, and size. By using the flyweight pattern, we can create a single object 
+   for each set of properties and reuse it when needed.
+-> Game development: In game development, the flyweight pattern is used to reuse common objects such as game textures, sound effects, and animations. This reduces the memory usage and improves the performance of the game.
