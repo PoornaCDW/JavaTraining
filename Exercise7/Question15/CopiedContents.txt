@@ -1,0 +1,4 @@
+Hello! this is a sentance - to be copied!!
+
+Programming in JAVA;
+Please use Design patterns;
